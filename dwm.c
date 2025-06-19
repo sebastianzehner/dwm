@@ -603,6 +603,12 @@ buttonpress(XEvent *e)
             	buttons[i].func(click == ClkTagBar && buttons[i].arg.i == 0 ? &arg : &buttons[i].arg);
             }
     	}
+
+      /* handle mouse wheel (Button4/5) over status text */
+	    if (click == ClkStatusText && (ev->button == Button4 || ev->button == Button5)) {
+		      Arg arg = { .i = ev->button };
+		      sigdwmblocks(&arg);
+	    }
 }
 
 void
