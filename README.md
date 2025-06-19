@@ -46,6 +46,11 @@ Additional usability tweaks like skipping vacant tags, hiding unused tags, and f
 - `Super + Q` kills the focused client, while `Alt + Shift + Q` quits **dwm** and all open clients - equivalent to selecting **Quit** from the power menu
 - Clipboard shortcuts like `Alt + C` and `Alt + V` open **cliphist** via **dmenu** to manage clipboard history
 - The clipboard script is available here: [cliphist](https://github.com/sebastianzehner/cliphist)
+- Multimedia keys (from your keyboard) control audio directly:
+  - Volume Up: `XF86AudioRaiseVolume`
+  - Volume Down: `XF86AudioLowerVolume`
+  - Mute Toggle: `XF86AudioMute`
+- These trigger a `pipewire`-based volume script with visual notifications and update the status bar
 
 ## Installation
 
