@@ -20,7 +20,11 @@ I have applied the following patches to enhance functionality and appearance:
 
 ## Patch Functionality
 
-This build of **dwm** includes several patches to enhance usability, visual appearance, and dynamic behavior. Features like **vanitygaps**, **bar-height-spacing**, and **borderrule** allow for a cleaner and more customizable layout. Functional improvements include **swallow** for seamless terminal-based app launches, **fsignal** and **dwmblocks** for dynamic status bar updates, and **xrdb** for loading settings from `.Xresources` or [pywal](https://github.com/eylles/pywal16) without recompilation. Additional usability tweaks like skipping vacant tags, hiding unused tags, and fixing border behavior round out a smooth and efficient window management experience.
+This build of **dwm** includes several patches to enhance usability, visual appearance, and dynamic behavior. Features like **vanitygaps**, **bar-height-spacing**, and **borderrule** allow for a cleaner and more customizable layout.
+
+Functional improvements include **swallow** for seamless terminal-based app launches, **fsignal** and **dwmblocks** for dynamic status bar updates, and **xrdb** for loading settings from `.Xresources` or [pywal](https://github.com/eylles/pywal16) without recompilation.
+
+Additional usability tweaks like skipping vacant tags, hiding unused tags, and fixing border behavior round out a smooth and efficient window management experience.
 
 ## Additional Customizations
 
