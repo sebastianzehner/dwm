@@ -7,6 +7,7 @@ This is my custom build of [dwm](https://dwm.suckless.org/), a dynamic window ma
 I have applied the following patches to enhance functionality and appearance:
 
 - [`adjacenttag-skipvacant`](https://dwm.suckless.org/patches/adjacenttag/)
+- [`attachbottom`](https://dwm.suckless.org/patches/attachbottom/)
 - [`bar-height-spacing`](https://dwm.suckless.org/patches/bar_height/)
 - [`borderrule`](https://dwm.suckless.org/patches/borderrule/)
 - [`dwmblocks`](https://github.com/ashish-yadav11/dwmblocks)
@@ -24,7 +25,7 @@ This build of **dwm** includes several patches to enhance usability, visual appe
 
 Functional improvements include **swallow** for seamless terminal-based app launches, **fsignal** and **dwmblocks** for dynamic status bar updates, and **xrdb** for loading settings from `.Xresources` or [pywal](https://github.com/eylles/pywal16) without recompilation.
 
-Additional usability tweaks like skipping vacant tags, hiding unused tags, and fixing border behavior round out a smooth and efficient window management experience.
+Additional usability tweaks like skipping vacant tags, hiding unused tags, attach new clients at the bottom of the stack and fixing border behavior round out a smooth and efficient window management experience.
 
 ## Additional Customizations
 
