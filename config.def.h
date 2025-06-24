@@ -53,14 +53,14 @@ static const Rule rules[] = {
       *	WM_CLASS(STRING) = instance, class
       *	WM_NAME(STRING) = title
       */
-      /* class     	      instance  title           tags mask  isfloating  isterminal   noswallow  monitor   border width */
-      { "Gimp",           NULL,     NULL,           0,         1,          0,           0,        -1,        -1 },
+      /* class            instance  title           tags mask  isfloating  isterminal  noswallow  monitor   border width */
+      { "Gimp",           NULL,     NULL,           0,         1,          0,           0,        -1,       -1 },
       { "firefox-esr", 	  NULL,     NULL,           0,         0,          0,          -1,        -1,        0 },
       { "librewolf",   	  NULL,     NULL,           0,         0,          0,          -1,        -1,        0 },
-      { "st",             NULL,     NULL,           0,         0,          1,           0,        -1,        -1 },
+      { "st",             NULL,     NULL,           0,         0,          1,           0,        -1,       -1 },
       { "Minecraft",      NULL,     NULL,           1 << 8,    1,          0,           0,        -1,        0 },
       { "PrismLauncher",  NULL,     NULL,           1 << 8,    1,          0,           0,        -1,        0 },
-      { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1,        -1 }, /* xev */
+      { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1,       -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -176,9 +176,9 @@ static const Key keys[] = {
       { 0,                            XF86XK_AudioMute,         spawn,          SHCMD("audio_volume mute") },
 
 /* script launch bindings */
-      { MODKEY,                       XK_v,                     spawn,          {.v = (const char*[]){ "cliphist", "sel", NULL } } },
-      { MODKEY,                       XK_c,                     spawn,          {.v = (const char*[]){ "cliphist", "add", NULL } } },
-      { MODKEY,                       XK_q,                     spawn,          {.v = (const char*[]){ "powermenu", NULL } } },
+      { MODKEY,                       XK_v,                     spawn,          SHCMD("cliphist sel") },
+      { MODKEY,                       XK_c,                     spawn,          SHCMD("cliphist add") },
+      { MODKEY,                       XK_q,                     spawn,          SHCMD("powermenu") },
       { MODKEY|ShiftMask,             XK_3,                     spawn,          SHCMD("screenshot full") },
       { MODKEY|ShiftMask,             XK_4,                     spawn,          SHCMD("screenshot area") },
       { MODKEY|ShiftMask,             XK_5,                     spawn,          SHCMD("screenshot") },
