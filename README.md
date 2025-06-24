@@ -15,7 +15,9 @@ I have applied the following patches to enhance functionality and appearance:
 - [`fsignal`](https://dwm.suckless.org/patches/fsignal/)
 - [`hide_vacant_tags`](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [`noborderfloatingfix`](https://dwm.suckless.org/patches/noborder/)
+- [`pertag`](https://dwm.suckless.org/patches/pertag/)
 - [`swallow`](https://dwm.suckless.org/patches/swallow/)
+- [`taglayouts`](https://dwm.suckless.org/patches/taglayouts/)
 - [`vanitygaps`](https://dwm.suckless.org/patches/vanitygaps/)
 - [`xrdb`](https://dwm.suckless.org/patches/xrdb/)
 
@@ -26,6 +28,8 @@ This build of **dwm** includes several patches to enhance usability, visual appe
 Functional improvements include **swallow** for seamless terminal-based app launches, **fsignal** and **dwmblocks** for dynamic status bar updates, and **xrdb** for loading settings from `.Xresources` or [pywal](https://github.com/eylles/pywal16) without recompilation.
 
 Additional usability tweaks like skipping vacant tags, hiding unused tags, attach new clients at the bottom of the stack and fixing border behavior round out a smooth and efficient window management experience.
+
+The `pertag` and `taglayouts` patches, allowing each tag to retain its own layout and settings.
 
 ## Additional Customizations
 
@@ -52,6 +56,14 @@ Additional usability tweaks like skipping vacant tags, hiding unused tags, attac
   - Volume Down: `XF86AudioLowerVolume`
   - Mute Toggle: `XF86AudioMute`
 - These trigger a `pipewire`-based volume script with visual notifications and update the status bar
+- Toggling layout with `Alt` + `P` or change tag layout:
+  - Tile: `Alt` + `T`
+  - Monocle: `Alt` + `F`
+  - Grid: `Alt` + `G`
+
+## Stability fix
+
+A crash could occur when toggling layouts with `.v = 0` and no prior layout was set. This has been fixed by validating the layout state before toggling. Toggling is now safe even without previous layout initialization.
 
 ## Installation
 
