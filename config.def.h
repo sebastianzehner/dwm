@@ -60,6 +60,7 @@ static const Rule rules[] = {
       { "st",             NULL,     NULL,           0,         0,          1,           0,        -1,       -1 },
       { "Minecraft",      NULL,     NULL,           1 << 8,    1,          0,           0,        -1,        0 },
       { "PrismLauncher",  NULL,     NULL,           1 << 8,    1,          0,           0,        -1,        0 },
+      { "Mumble",         NULL,     NULL,           1 << 7,    0,          0,           0,        -1,        0 },
       { NULL,             NULL,     "Event Tester", 0,         0,          0,           1,        -1,       -1 }, /* xev */
 };
 
@@ -174,6 +175,11 @@ static const Key keys[] = {
       { 0,                            XF86XK_AudioRaiseVolume,  spawn,          SHCMD("audio_volume up") },
       { 0,                            XF86XK_AudioLowerVolume,  spawn,          SHCMD("audio_volume down") },
       { 0,                            XF86XK_AudioMute,         spawn,          SHCMD("audio_volume mute") },
+      { 0,                            XF86XK_AudioPlay,         spawn,          SHCMD("playerctl play-pause") },
+      { 0,                            XF86XK_AudioNext,         spawn,          SHCMD("playerctl-mpd-fix next") },
+      { 0,                            XF86XK_AudioPrev,         spawn,          SHCMD("playerctl-mpd-fix previous") },
+      { 0,                            XF86XK_MonBrightnessUp,   spawn,          SHCMD("brightness up") },
+      { 0,                            XF86XK_MonBrightnessDown, spawn,          SHCMD("brightness down") },
 
 /* script launch bindings */
       { MODKEY,                       XK_v,                     spawn,          SHCMD("cliphist sel") },
